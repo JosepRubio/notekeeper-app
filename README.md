@@ -24,7 +24,7 @@ Welcome to the FrontEnd challenge! This challenge is designed to test your skill
 
 ### Development
 
-- Read and understand project requirements thoroughly.
+- Read and understand project requirements defined in [CHALLENGE.md](/CHALLENGE.md).
 - Develop logic adhering to good practices and clean code principles.
 - Organize your work using branches and Pull Requests (PRs). Ensure all checks pass before merging (`🟢`).
 
@@ -46,4 +46,4 @@ By utilizing AI assistants responsibly and ensuring that all generated code is c
 
 ### Deadline
 
-Friday the 24th of May
+🗓️ Friday the 24th of May
