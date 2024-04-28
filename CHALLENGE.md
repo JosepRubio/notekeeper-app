@@ -1,12 +1,20 @@
 # Notekeeper React App Guide
 
-## Introduction
-
 Welcome to the Notekeeper React App Guide!
 
 This guide will walk you through the requirements for building a Notekeeper app, including CRUD (Create, Read, Update, Delete) actions for notes, UI components involved, and reference to the Notekeeper API.
 
-### CRUD Operations
+## Notekeeper API Reference
+
+The Notekeeper API, designed to be consumed by the Notekeeper React App, provides endpoints for managing notes. You can find the Notekeeper API repository [here](https://github.com/DAW-EPIA-MAT/notekeeper-api). Follow the instructions in the repository's README to set up and run the API locally.
+
+Follow the steps below to set up and run the API locally:
+
+1. Clone the Notekeeper API repository to your local machine.
+2. Install any necessary dependencies.
+3. Run the API server locally using the provided commands.
+
+## CRUD Operations
 
 The Notekeeper React App should allow users to perform the following actions with notes:
 
@@ -15,13 +23,16 @@ The Notekeeper React App should allow users to perform the following actions wit
 3. **Update**: Users can edit notes.
 4. **Delete**: Users can delete existing notes.
 
-### Data Validation helpers
+> [!TIP]  
+> Create a `services/notes` folder to define data fetching over Notekeeper API.
+
+## Data Validation helpers
 
 In the Notekeeper React App, it's essential to validate the data once a form is submitted to ensure that the input provided by the user meets the specified requirements. Data validation helps maintain data integrity and prevents errors caused by invalid input.
 
 When a user submits a form to create or update a note, the input fields (such as name, description, important, status, and due date) must be validated before the data is sent to the server or stored locally.
 
-Creat a folder `helpers` to ensure validation three validation methods must be defined as helpers:
+Define these validation methods:
 
 - `validateType.js`: This validator ensures that each property of the note object has the correct data type. It can check whether each property is of the expected type (e.g., string, boolean) and return true if all properties match their expected types, or false otherwise.
 
@@ -29,7 +40,10 @@ Creat a folder `helpers` to ensure validation three validation methods must be d
 
 - `validateNonEmpty.js`: This validator ensures that string properties (such as "name" and "description") are not empty. It can check whether string properties have non-empty content and return true if they do, or false otherwise.
 
-### Testing Data Validation Helpers
+> [!TIP]  
+> Create a `helpers/validation` folder to define validation methods.
+
+## Testing Data Validation Helpers
 
 Testing data validation helpers is crucial to ensure that they accurately validate the properties of note objects according to the specified criteria. By writing unit tests for these helpers, we can verify that they correctly identify valid and invalid data, enhancing the reliability of our application.
 
@@ -41,7 +55,10 @@ Define tests for these validators:
 
 - `validateNonEmpty.test.js`
 
-### UI Components
+> [!TIP]  
+> Create a `helpers/validation/test` folder to define validation tests.
+
+## UI Components
 
 The following UI components are involved in the Notekeeper React App:
 
@@ -53,15 +70,8 @@ The following UI components are involved in the Notekeeper React App:
 
 Implement best practises to extract components, so you can ensure reusability and maintainability.
 
-## Notekeeper API Reference
-
-The Notekeeper API, designed to be consumed by the Notekeeper React App, provides endpoints for managing notes. You can find the Notekeeper API repository [here](https://github.com/DAW-EPIA-MAT/notekeeper-api). Follow the instructions in the repository's README to set up and run the API locally.
-
-Follow the steps below to set up and run the API locally:
-
-1. Clone the Notekeeper API repository to your local machine.
-2. Install any necessary dependencies.
-3. Run the API server locally using the provided commands.
+> [!TIP]  
+> Create a `components` folder to define Rect components.
 
 ## Deployment
 
