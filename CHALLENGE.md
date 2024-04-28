@@ -14,6 +14,9 @@ Follow the steps below to set up and run the API locally:
 2. Install any necessary dependencies.
 3. Run the API server locally using the provided commands.
 
+> [!TIP]  
+> You can use HTTP clients (as Postman or Insomnia) to test API endpoints.
+
 ## CRUD Operations
 
 The Notekeeper React App should allow users to perform the following actions with notes:
