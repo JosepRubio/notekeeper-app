@@ -6,14 +6,14 @@ function App() {
   const {
     notes,
     loading,
-    handleNewNoteEntry,
-    handleDeleteNoteEntry,
-    handleUpdateNoteEntry,
+    handleAddNewNote,
+    getAllNotesHandler,
+    handleDeleteNote,
+    handleUpdateNote,
   } = useNote();
-  console.log (notes)
 
   return (
-    <NoteList notes={notes} loading={loading}/>
+    <NoteList notes={notes} loading={loading} handleAddNewNote={handleAddNewNote} getAllNotesHandler={getAllNotesHandler} handleUpdateNote={handleUpdateNote} handleDeleteNote={handleDeleteNote} />
       
     
   );

@@ -15,16 +15,52 @@ const getAllNotes = async () => {
   }
 };
 
-const createNote = (noteValues) => {
- 
+const createNote = async (body) => {
+  const options = { method: "POST", headers: { "Content-Type": "application/json" }, body:JSON.stringify(body) };
+  try {
+    const response = await fetch(baseUrl, options);
+    if (!response.ok) {
+      console.log(`Error obtaining notes, Status: ${response.status}`);
+      return null;
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 };
 
-const updateNote = (id, noteValues) => {
+const updateNote = async (id, body) => {
+  const options = { method: "PUT", headers: { "Content-Type": "application/json" }, body:JSON.stringify(body) };
+  try {
+    const baseUrlWithId = `${baseUrl}/${id}`
+    const response = await fetch(baseUrlWithId, options);
+    if (!response.ok) {
+      console.log(`Error obtaining notes, Status: ${response.status}`);
+      return null;
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Error: ", error);
+  }
   
 };
 
-const deleteNote = (id, noteValues) => {
- 
+const deleteNote = async (id) => {
+  const options = { method: "DELETE", headers: { "Content-Type": "application/json" }};
+  try {
+    const baseUrlWithId = `${baseUrl}/${id}`
+    const response = await fetch(baseUrlWithId, options);
+    if (!response.ok) {
+      console.log(`Error deleting notes, Status: ${response.status}`);
+      return null;
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 };
 
 export default { getAllNotes, createNote, updateNote, deleteNote };
