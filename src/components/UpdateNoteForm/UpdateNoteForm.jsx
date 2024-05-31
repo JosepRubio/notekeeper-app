@@ -1,3 +1,5 @@
+import Button from "../Button/Button";
+
 export const UpdateNoteForm = ({note,handleUpdateSubmit}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,7 +63,7 @@ export const UpdateNoteForm = ({note,handleUpdateSubmit}) => {
          required
        />
      </div>
-     <button type="submit">Update</button>
+     <Button text={"Update"}/>
    
    </form>
    ) 
